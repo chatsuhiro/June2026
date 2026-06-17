@@ -3,39 +3,6 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-        name='guess_two_thirds',
-        display_name="Guess 2/3 of the Average",
-        app_sequence=['guess_two_thirds', 'payment_info'],
-        num_demo_participants=3,
-    ),
-    dict(
-        name='prisoner0514',
-        display_name="囚人のジレンマ0514",
-        app_sequence=['prisoner0514', 'payment_info'],
-        num_demo_participants=2,
-    ),
-    dict(
-        name='survey', app_sequence=['survey', 'payment_info'], num_demo_participants=1
-    ),
-    dict(
-        name='PG3',
-        display_name="はじめての公共財ゲーム",
-        num_demo_participants=3,
-        app_sequence=['publicgoods_trial']
-    ),
-    dict(
-        name = 'UG',
-        display_name = "はじめての最終提案ゲーム",
-        app_sequence = ['ultimatum_trial'],
-        num_demo_participants = 2,
-    ),
-    dict(
-        name='TG',
-        display_name="はじめての信頼ゲーム",
-        num_demo_participants=2,
-        app_sequence=['trust_trial']
-    ),
-    dict(
         name='AG',
         display_name="再実験A",
         num_demo_participants=30,
