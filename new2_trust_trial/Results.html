@@ -1,0 +1,16 @@
+{{ block title }}結果{{ endblock }}
+{{ block content }}
+<p>あなたのID: <strong>{{ player.random_id }}</strong></p>
+{% if round == 1 %}
+  <p>第1回の送金額: <strong>{{ sent_amount }}</strong></p>
+  <p>第2回にお進みください。</p>
+{% else %}
+  <table class="table">
+    <tr><th>初期保有額</th><td>10 points</td></tr>
+    <tr><th>受け取った金額</th><td>{{ received_amount }}</td></tr>
+    <tr><th>返送額</th><td>{{ sent_back_amount }}</td></tr>
+    <tr><th>あなたの最終利得</th><td>{{ payoff }}</td></tr>
+  </table>
+{% endif %}
+{{ next_button }}
+{{ endblock }}

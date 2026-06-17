@@ -1,0 +1,11 @@
+{{ block title }}ゲームの説明{{ endblock }}
+{{ block content }}
+<p>あなたのIDは <strong>{{ player.random_id }}</strong> です。メモしておいてください。</p>
+<ul>
+  <li>初期保有額: {{ endowment }}</li>
+  <li>送金額は {{ multiplier }} 倍になって相手に渡ります</li>
+  <li>第1回: 全員が送金者（A）として送金します</li>
+  <li>第2回: 全員が受取人（B）として返送額を決めます</li>
+</ul>
+{{ next_button }}
+{{ endblock }}

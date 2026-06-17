@@ -1,0 +1,11 @@
+{{ block title }}第2回：返送額の入力{{ endblock }}
+{{ block content }}
+<p>あなたは <strong>受取人（B）</strong> です。</p>
+<p>あなたの初期保有額は <strong>10 points</strong> です。</p>
+<p>送金者ID <strong>{{ matched_sender_id }}</strong> から送られた金額が3倍になり、
+<strong>{{ received_amount }}</strong> を受け取りました。</p>
+<p>あなたの合計保有額：<strong>{{ total_amount }} points</strong>（初期保有額10点＋受け取り{{ received_amount }}点）</p>
+<p>返送できる金額は <strong>0〜{{ total_amount }} points</strong> です。</p>
+{{ formfields }}
+{{ next_button }}
+{{ endblock }}

@@ -1,0 +1,8 @@
+{{ block title }}第1回：送金額の入力{{ endblock }}
+{{ block content }}
+<p>あなたのID: <strong>{{ player.random_id }}</strong></p>
+<p>初期保有額は <strong>{{ endowment }}</strong> です。</p>
+<p>相手に送る金額を入力してください（0〜{{ endowment }}）。</p>
+{{ formfields }}
+{{ next_button }}
+{{ endblock }}
