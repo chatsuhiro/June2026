@@ -13,7 +13,19 @@ SESSION_CONFIGS = [
         display_name="再実験B",
         num_demo_participants=30,
         app_sequence=['再実験trust1','再実験trust3']
-    )
+    ),
+    dict(
+        name='new_trust_trial',
+        display_name='信頼ゲーム（再実験）',
+        app_sequence=['new_trust_trial'],
+        num_demo_participants=5,
+    ),
+    dict(
+        name='new2_trust_trial',
+        display_name='信頼ゲーム（名前付き）',
+        app_sequence=['new2_trust_trial'],
+        num_demo_participants=5,
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
