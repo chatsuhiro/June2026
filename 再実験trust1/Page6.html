@@ -1,0 +1,39 @@
+{{ block title }}
+    結果の確認
+{{ endblock }}
+
+
+{{ block content }}
+
+
+{{ if player.id_in_group == 1}}
+<p>
+    あなたは<span style="color: red; font-weight: bold;">プレイヤー1</span>でした．<br>
+    あなたは{{ group.give_amount }}を支払い，<br>
+    プレイヤー2は{{ group.back_amount }}を支払いました．<br>
+</p>
+{{ else }}
+<p>
+    あなたは<span style="color: blue; font-weight: bold;">プレイヤー2</span>でした．<br>
+    プレイヤー1は{{ group.give_amount }}を支払い，<br>
+    あなた2は{{ group.back_amount }}を支払いました．<br>
+</p>
+{{ endif }}
+<p>
+    その結果，あなた{{ player.payoff }}を獲得しました．<br>
+    プレイヤーそれぞれの利得は以下のとおりです．
+</p>
+<table>
+    <tr>
+        <th><B>プレイヤー</B></th>
+        <th><B>利得</B></th>
+    </tr>
+    {{ for p in group.get_players }}
+    <tr>
+        <td>プレイヤー{{ p.id_in_group }}：</td>
+        <td>{{ p.payoff }}</td>
+    </tr>
+    {{ endfor }}
+</table>
+{{ next_button }}
+{{ endblock }}

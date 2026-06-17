@@ -1,0 +1,50 @@
+{{ block title }}
+    説明
+{{ endblock }}
+
+{{ block content }}
+<p>
+    これからラウンド２の実験を行います。<br>
+    先ほどの実験とは違う人とペアになります。
+</p>
+<p>
+    <span style="color: red; font-weight: bold;">過去に行われた同様の実験の結果より、
+        プレイヤー2のうち約80％の人がプレイヤー1がプレイヤー2に渡したポイント以上のポイントを返しました。<br>
+    （ex:5点渡したら、5点以上返ってきた）</span>
+</p>
+<p>
+    このゲームではプレイヤー1とプレイヤー2に割り振られます．<br>
+    それぞれの役割は以下のとおりです
+</p>
+<div class="card bg-light mb-3">
+    <div class="card-body">
+        <h5 class="card-title">あなたの役割</h5>
+        <p class="card-text">
+            今回の実験でのあなたの役割は、
+            <strong>
+                {% if player.id_in_group == 1 %}
+                    <span style="color: red; font-size: 1.2em;">プレイヤー１</span>
+                {% else %}
+                    <span style="color: blue; font-size: 1.2em;">プレイヤー２</span>
+                {% endif %}
+            </strong>
+            です。
+        </p>
+    </div>
+</div>
+<div>
+    <span style="color: red; font-weight: bold;">プレイヤー1に割り振られた場合</span>
+    <p>
+        あなたは最初<B>{{ C.ENDOWMENT }}</B>を持っています．<br>
+        その中からプレイヤー2に<B>いくら渡すか</B>を決めてもらいます．<br>
+        ただし，プレイヤー2には，プレイヤー1に渡したポイントを<B>{{ C.MULTIPLIER }}倍にしたポイント</B>が渡されます．<br>
+        プレイヤー2は受け取ったポイントの中から，プレイヤー1に渡すポイントを決めます．<br>
+    </p>
+    <span style="color: blue; font-weight: bold;">プレイヤー2に割り振られた場合</span>
+    <p>あなたは{{ C.ENDOWMENT }}を持っているプレイヤー1の渡したポイントが<br>
+        <B>{{ C.MULTIPLIER }}倍にしたポイント</B>が渡されます．<br>
+        その金額の中からプレイヤー1に<B>いくら返すか</B>を決めます．<br>
+    </p>
+</div>
+    {{ next_button }}
+{{ endblock }}
