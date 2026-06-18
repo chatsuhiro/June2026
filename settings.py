@@ -18,13 +18,13 @@ SESSION_CONFIGS = [
         name='new_trust_trial',
         display_name='信頼ゲーム（再実験）',
         app_sequence=['new_trust_trial'],
-        num_demo_participants=5,
+        num_demo_participants=11,
     ),
     dict(
         name='new2_trust_trial',
         display_name='信頼ゲーム（名前付き）',
         app_sequence=['new2_trust_trial'],
-        num_demo_participants=5,
+        num_demo_participants=11,
     ),
 ]
 
