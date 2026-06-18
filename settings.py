@@ -49,12 +49,27 @@ REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
 
 ROOMS = [
+    # ==== 【前半戦】信頼ゲームの同時実施用ルーム ====
     dict(
-        name='econ101',
-        display_name='Econ 101 class',
-        participant_label_file='_rooms/econ101.txt',
+        name='room_trust_trial',
+        display_name='1. 信頼ゲーム（再実験）用ルーム',
+        # 必要に応じて、あらかじめ準備している学籍番号リストなどを指定（なければ削ってOK）
+        # participant_label_file='_rooms/students.txt', 
     ),
-    dict(name='live_demo', display_name='Room for live demo (no participant labels)'),
+    dict(
+        name='room_name_trial',
+        display_name='2. 信頼ゲーム（名前付き）用ルーム',
+    ),
+
+    # ==== 【後半戦】再実験A・Bの同時実施用ルーム ====
+    dict(
+        name='room_saizikken_a',
+        display_name='3. 再実験A（AG）用ルーム',
+    ),
+    dict(
+        name='room_saizikken_b',
+        display_name='4. 再実験B（BG）用ルーム',
+    ),
 ]
 
 ADMIN_USERNAME = 'admin'
